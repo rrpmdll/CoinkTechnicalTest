@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+       <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="value" type="xsd:string" minOccurs="0" />
+       </xsd:sequence>
+  <xsd:attribute name="name" use="required" type="xsd:string" />
+        <xsd:attribute name="type" type="xsd:string" />
+     <xsd:attribute name="mimetype" type="xsd:string" />
+         <xsd:attribute ref="xml:space" />
+         </xsd:complexType>
+      </xsd:element>
+  <xsd:element name="assembly">
+   <xsd:complexType>
+ <xsd:attribute name="alias" type="xsd:string" />
+      <xsd:attribute name="name" type="xsd:string" />
+     </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+         <xsd:sequence>
+      <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+       <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+   <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+           <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+ <xsd:attribute ref="xml:space" />
+      </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+    </xsd:sequence>
+     <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Country Queries -->
+  <data name="CountryGetAll" xml:space="preserve">
+    <value>SELECT * FROM sp_country_get_all()</value>
+    <comment>Query to get all countries</comment>
+  </data>
+  <data name="CountryGetById" xml:space="preserve">
+    <value>SELECT * FROM sp_country_get_by_id(@p_id)</value>
+    <comment>Query to get country by ID</comment>
+  </data>
+  
+  <!-- User Queries -->
+  <data name="UserCreate" xml:space="preserve">
+    <value>SELECT * FROM sp_user_create(@p_name, @p_phone, @p_address, @p_municipality_id)</value>
+    <comment>Query to create a new user</comment>
+  </data>
+  <data name="UserGetById" xml:space="preserve">
+    <value>SELECT * FROM sp_user_get_by_id(@p_id)</value>
+    <comment>Query to get user by ID</comment>
+  </data>
+  <data name="UserGetAll" xml:space="preserve">
+    <value>SELECT * FROM sp_user_get_all()</value>
+    <comment>Query to get all users</comment>
+  </data>
+  <data name="UserUpdate" xml:space="preserve">
+    <value>SELECT * FROM sp_user_update(@p_id, @p_name, @p_phone, @p_address, @p_municipality_id)</value>
+    <comment>Query to update a user</comment>
+  </data>
+  <data name="UserDelete" xml:space="preserve">
+    <value>SELECT sp_user_delete(@p_id)</value>
+    <comment>Query to delete a user</comment>
+  </data>
+  
+  <!-- Department Queries -->
+  <data name="DepartmentGetAll" xml:space="preserve">
+    <value>SELECT * FROM sp_department_get_all()</value>
+    <comment>Query to get all departments</comment>
+  </data>
+  <data name="DepartmentGetByCountryId" xml:space="preserve">
+    <value>SELECT * FROM sp_department_get_by_country_id(@p_country_id)</value>
+ <comment>Query to get departments by country ID</comment>
+  </data>
+  <data name="DepartmentGetById" xml:space="preserve">
+  <value>SELECT * FROM sp_department_get_by_id(@p_id)</value>
+    <comment>Query to get department by ID</comment>
+  </data>
+  
+  <!-- Municipality Queries -->
+  <data name="MunicipalityGetAll" xml:space="preserve">
+    <value>SELECT * FROM sp_municipality_get_all()</value>
+    <comment>Query to get all municipalities</comment>
+  </data>
+  <data name="MunicipalityGetByDepartmentId" xml:space="preserve">
+    <value>SELECT * FROM sp_municipality_get_by_department_id(@p_department_id)</value>
+    <comment>Query to get municipalities by department ID</comment>
+  </data>
+  <data name="MunicipalityGetById" xml:space="preserve">
+ <value>SELECT * FROM sp_municipality_get_by_id(@p_id)</value>
+    <comment>Query to get municipality by ID</comment>
+  </data>
+  <data name="MunicipalityExists" xml:space="preserve">
+    <value>SELECT sp_municipality_exists(@p_id)</value>
+    <comment>Query to check if municipality exists</comment>
+  </data>
+</root>

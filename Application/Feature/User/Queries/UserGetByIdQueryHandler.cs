@@ -1,0 +1,25 @@
+using AutoMapper;
+using Coink.Microservice.Domain.DTOs.User;
+using Coink.Microservice.Domain.Service.User;
+using MediatR;
+
+namespace Coink.Microservice.Application.Feature.User.Queries
+{
+    public class UserGetByIdQueryHandler : IRequestHandler<UserGetByIdQuery, UserDto>
+    {
+        private readonly UserService _userService;
+        private readonly IMapper _mapper;
+
+        public UserGetByIdQueryHandler(UserService userService, IMapper mapper)
+        {
+            _userService = userService;
+            _mapper = mapper;
+        }
+
+        public async Task<UserDto> Handle(UserGetByIdQuery request, CancellationToken cancellationToken)
+        {
+            var entity = await _userService.GetByIdAsync(request.Id);
+            return _mapper.Map<UserDto>(entity);
+        }
+    }
+}

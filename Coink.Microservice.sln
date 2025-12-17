@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coink.Microservice.Application", "Application\Coink.Microservice.Application.csproj", "{1D161ACB-8345-4F90-9B37-7114633C8E6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coink.Microservice.Domain", "Domain\Coink.Microservice.Domain.csproj", "{DBE9431A-F7EE-4210-A4FC-AD52333B83CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coink.Microservice.Infrastructure", "Infrastructure\Coink.Microservice.Infrastructure.csproj", "{C80B64D6-C69B-41FF-81BA-7A7A91A0FCE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coink.Microservice.Api", "Api\Coink.Microservice.Api.csproj", "{06B7979B-DAC8-416A-B1FE-F88FB06C4629}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6C625F20-BF6E-4D89-9E74-94983B8049CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coink.Microservice.Domain.Test", "Domain.Test\Coink.Microservice.Domain.Test.csproj", "{C03D3EBA-DF76-4A65-ADBA-779E545498C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coink.Microservice.Api.Test", "Api.Test\Coink.Microservice.Api.Test.csproj", "{AEB8D3D9-13F9-4B64-B5E7-E2C7F76EA80A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D161ACB-8345-4F90-9B37-7114633C8E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D161ACB-8345-4F90-9B37-7114633C8E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D161ACB-8345-4F90-9B37-7114633C8E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D161ACB-8345-4F90-9B37-7114633C8E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE9431A-F7EE-4210-A4FC-AD52333B83CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE9431A-F7EE-4210-A4FC-AD52333B83CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE9431A-F7EE-4210-A4FC-AD52333B83CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE9431A-F7EE-4210-A4FC-AD52333B83CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C80B64D6-C69B-41FF-81BA-7A7A91A0FCE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C80B64D6-C69B-41FF-81BA-7A7A91A0FCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C80B64D6-C69B-41FF-81BA-7A7A91A0FCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C80B64D6-C69B-41FF-81BA-7A7A91A0FCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B7979B-DAC8-416A-B1FE-F88FB06C4629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B7979B-DAC8-416A-B1FE-F88FB06C4629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B7979B-DAC8-416A-B1FE-F88FB06C4629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B7979B-DAC8-416A-B1FE-F88FB06C4629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C03D3EBA-DF76-4A65-ADBA-779E545498C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03D3EBA-DF76-4A65-ADBA-779E545498C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03D3EBA-DF76-4A65-ADBA-779E545498C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03D3EBA-DF76-4A65-ADBA-779E545498C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB8D3D9-13F9-4B64-B5E7-E2C7F76EA80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB8D3D9-13F9-4B64-B5E7-E2C7F76EA80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB8D3D9-13F9-4B64-B5E7-E2C7F76EA80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB8D3D9-13F9-4B64-B5E7-E2C7F76EA80A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C03D3EBA-DF76-4A65-ADBA-779E545498C3} = {6C625F20-BF6E-4D89-9E74-94983B8049CE}
+		{AEB8D3D9-13F9-4B64-B5E7-E2C7F76EA80A} = {6C625F20-BF6E-4D89-9E74-94983B8049CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39B7188E-51C7-4136-8F4C-AFFEC75650E5}
+	EndGlobalSection
+EndGlobal
